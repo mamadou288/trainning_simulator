@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Simulateur d'Entretien Technique{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Simulateur d'Entretien</a></h1>
+        <nav>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Déconnexion</a>
+            {% else %}
+                <a href="{% url 'login' %}">Connexion</a> |
+                <a href="{% url 'register' %}">Inscription</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>© 2025 Simulateur d’Entretien Technique</p>
+    </footer>
+</body>
+</html>

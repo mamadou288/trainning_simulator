@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Accueil - Simulateur d'Entretien{% endblock %}
+
+{% block content %}
+    <h2>Bienvenue sur le Simulateur d'Entretien Technique</h2>
+    <p>
+        Entraîne-toi à passer des entretiens techniques avec des quiz chronométrés, des corrections instantanées et un suivi de ta progression.
+    </p>
+    <ul>
+        <li>📚 Questions sur Python, Django, SQL, Algo…</li>
+        <li>⏱️ Chrono et scoring automatique</li>
+        <li>📊 Suivi de performance avec historique</li>
+        <li>💬 Feedback personnalisé pour progresser</li>
+    </ul>
+    <p>
+        <a href="{% url 'register' %}">Créer un compte</a> ou <a href="{% url 'login' %}">se connecter</a> pour commencer !
+    </p>
+{% endblock %}
