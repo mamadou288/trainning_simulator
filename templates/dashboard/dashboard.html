@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Mon Dashboard{% endblock %}
+
+{% block content %}
+  <h2>Bienvenue {{ user.username }} 👋</h2>
+  <p>Bienvenue sur ton tableau de bord. Tu peux :</p>
+
+  <ul>
+    <li><a href="#">🎯 Lancer un quiz</a></li>
+    <li><a href="#">📊 Voir ton historique</a></li>
+    <li><a href="#">🧠 Recommandations personnalisées</a></li>
+  </ul>
+{% endblock %}
